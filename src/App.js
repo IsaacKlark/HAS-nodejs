@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const getDataFromServer = async() => {
-    await fetch('http://localhost:888/api').then(res => res.json(), 
+    await fetch('/api').then(res => res.json(), 
     err => {console.log(err)})
     .then(res => {console.log(res)}, err => {console.log(err)})
   };

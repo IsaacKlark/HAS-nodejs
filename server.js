@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 888;
+const port = process.env.PORT || 888;
 const app = express();
 const myData = {
     data1: 23,
