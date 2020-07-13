@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+const API_URL = process.env.REACT_APP_API_URL;
 
 function App() {
   const getDataFromServer = async() => {
-    await fetch('/api').then(res => res.json(), 
+    await fetch(API_URL).then(res => res.json(), 
     err => {console.log(err)})
     .then(res => {console.log(res)}, err => {console.log(err)})
   };

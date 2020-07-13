@@ -2,8 +2,8 @@ const express = require('express');
 const port = process.env.PORT || 888;
 const app = express();
 const myData = {
-    data1: 23,
-    data2: 25
+    data1: 50,
+    data2: 50
 }
 
 app.get('/api', (req, res) => {
