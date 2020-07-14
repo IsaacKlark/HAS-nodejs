@@ -43,10 +43,11 @@ function App() {
 
             console.log(data)
 
-            await fetch(API_URL + '/send', {
+            await fetch(API_URL, {
               method: 'POST',
               body: JSON.stringify(data)
-            });
+            }).then(res => res.json(), err => {console.log(err)})
+            .then(res => {console.log(res)}, err => {console.log(err)});
           }
         }
       >

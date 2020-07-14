@@ -11,10 +11,11 @@ app.get('/api', (req, res) => {
     res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.json(myData);
 });
-app.post('/api/send', bodyParser.text(), (req, res) => {
+app.post('/api', bodyParser.text(), (req, res) => {
     res.set('Access-Control-Allow-Origin', 'http://localhost:3000')
     console.log(JSON.parse(req.body))
     myData = JSON.parse(req.body);
+    res.json('success')
 })
 app.use(express.static('build'));
 app.listen(port, () => {
